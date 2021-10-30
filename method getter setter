@@ -1,0 +1,100 @@
+// Method Getter Setter
+
+package com.enkapsulasi;
+
+class toko{
+    String barang;
+    int stok,harga_satuan,harga,total_harga;
+
+
+    // toko(String inputBarang, int inputHarga){
+    //     barang = inputBarang;
+    //     harga = inputHarga;
+
+    //     System.out.println(barang);
+    //     System.out.println(harga);
+    // }
+
+    public void setBarang(String barang){
+        this.barang = barang;
+    }
+    public void setStok(int stok){
+        this.stok = stok;
+    }
+    public void setHarga_satuan(int harga_satuan){
+        this.harga_satuan = harga_satuan;
+    }
+    public void setHarga(int harga){
+        this.harga = stok*harga_satuan;
+    }
+    public void setTotal_harga(int total_harga){
+        this.total_harga = total_harga;
+    }
+
+    public String getBarang(){
+        return barang;
+    }
+    public int getStok(){
+        return stok;
+    }
+    public int getHarga_satuan(){
+        return harga_satuan;
+    }
+    public int getHarga(){
+        return harga;
+    }
+    public int getTotal_harga(){
+        return total_harga;
+    }
+}
+
+
+// Method Utama
+
+package com.enkapsulasi;
+
+public class main {
+    public static void main(String[] args) {
+        
+        int total_harga;
+
+        toko toko1 = new toko();
+        toko1.setBarang("Bolpoint");
+        toko1.setStok(10);
+        toko1.setHarga_satuan(2000);
+        toko1.setHarga(10*2000);
+        int a = toko1.getHarga();
+
+        toko toko2 = new toko();
+        toko2.setBarang("Pensil");
+        toko2.setStok(10);
+        toko2.setHarga_satuan(1000);
+        toko2.setHarga(10*1000);
+        int b = toko2.getHarga();
+
+        toko toko3 = new toko();
+        toko3.setBarang("Pensil");
+        toko3.setStok(10);
+        toko3.setHarga_satuan(500);
+        toko3.setHarga(10*500);
+        int c = toko3.getHarga();
+
+        System.out.println("\nNama Alat Tulis : "+toko1.getBarang());
+        System.out.println("Jumlah Stok : "+toko1.getStok());
+        System.out.println("Harga Satuan : "+toko1.getHarga_satuan());
+        System.out.println("Harga : "+toko1.getHarga());
+        
+        System.out.println("\nNama Alat Tulis : "+toko2.getBarang());
+        System.out.println("Jumlah Stok : "+toko2.getStok());
+        System.out.println("Harga Satuan : "+toko2.getHarga_satuan());
+        System.out.println("Harga : "+toko2.getHarga());
+
+        System.out.println("\nNama Alat Tulis : "+toko3.getBarang());
+        System.out.println("Jumlah Stok : "+toko3.getStok());
+        System.out.println("Harga Satuan : "+toko3.getHarga_satuan());
+        System.out.println("Harga : "+toko3.getHarga());
+
+        total_harga = a+b+c;
+        System.out.println("\nTotal Harga : Rp. "+total_harga);
+    }
+}
